@@ -1,0 +1,232 @@
+/* fonts */
+@font-face {
+    font-family: "Norse" ;
+    src: url(./assets/Norse-Bold.otf);
+}@font-face {
+    font-family: "InterRegular";
+    src: url(./assets/Inter_Tight/static/InterTight-Regular.ttf);
+}@font-face {
+    font-family: "InterSemiBold";
+    src: url(./assets/Inter_Tight/static/InterTight-SemiBold.ttf);
+}@font-face {
+    font-family: "InterBold";
+    src: url(./assets/Inter_Tight/static/InterTight-Bold.ttf);
+}
+/* variables */
+:root{
+    --grey : rgb(80,80,80);
+    --green : rgb(55,100,55);
+    --light-green: rgb(99, 158, 99);
+    --dark-green: rgb(10, 60, 10);
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    height: 100vh;
+    font-family: "InterRegular";
+}
+/* background */
+.backgroundDiv{
+    width: 40vw;
+    background-image: url(./assets/greenLeafsBg.jpg);
+    background-size: cover;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+/* logo */
+.logoDiv{
+    width: 100%;
+    height: 150px;
+    background-color: rgba(0, 0, 0, 0.5);
+    margin-top: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;   
+}.logoImg{
+    width: 100px; 
+}.logoText{
+    font-size: 6rem;
+    font-family: Norse , "InterSemiBold" , sans-serif;
+}
+/* credit */
+.creditDiv{
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    word-spacing: 3px;
+}.creditDiv a{
+    color: white;
+    word-spacing: 0px;
+}.creditDiv a:hover{
+    color:orange;
+}
+/* main */
+main{
+    width: 60vw;
+}
+/* text */
+.mainText{
+    margin: 5vw 0 0 4vw;
+    font-size: 1.3rem;
+    font-family: "InterSemiBold";
+    width: 90%;
+    word-spacing: 2px;
+}.shortText{
+    margin: 1vw 0;
+}.newLine{
+    display: block;
+}.italic{
+    font-style: italic;
+}
+/* form */
+form{
+    width: 100%;
+}
+/* fieldset */
+fieldset{
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 0;
+    border: none;
+}fieldset div{
+    width:50%;
+}
+/* inputs / labels */
+label{
+    letter-spacing: 2px;
+    font-family: "InterSemiBold";
+    color: var(--grey);
+    display: block;
+    margin-bottom: 5px;
+}input{
+    width: min(90%, 300px);
+    border: 1px solid var(--grey);
+    border-radius: 5px;
+    font-size: 1rem;
+    padding: 5px;
+}input:focus{
+    outline:none;
+    border: 1px solid blue;
+    box-shadow: 1px 1px 3px black;
+}input:valid{
+    border: 1px solid green;
+}
+input:invalid{
+    border: 1px solid red;
+}
+/* shadow */
+.shadow{
+    width: 100%;
+    height: 10px;
+    box-shadow: 0px 5px 7px gray;
+}
+/* button */
+button{
+    background-color: var(--green);
+    border: 1px solid var(--green);
+    color: white;
+    padding: 10px 30px;
+    font-size: 1.3rem;
+    border-radius: 5px;
+    margin-top: 60px;
+}button:hover{
+    background-color: var(--light-green);
+    color: var(--dark-green);
+}
+/* log in instead */
+.logIn{
+    font-size: 1.2rem;
+    margin-top: 10px;
+}.greenText{
+    text-decoration: none;
+    color: var(--green);
+    font-family: "InterBold";
+}.greenText:hover{
+    text-decoration: underline;
+}
+/* margin left property */
+form h1, fieldset , button , .logIn{
+    margin-left: 4vw ;
+}
+/* credit div 2 */
+.creditDiv2{
+    width: 100%;
+    color: white;
+    word-spacing: 3px;
+    display: none;
+    padding: 5px;
+}.creditDiv2 a{
+    color: white;
+}.creditDiv2 a:hover{
+    color:orange;
+}
+/* media queries */
+@media (max-width: 900px) {
+    .mainText{
+        font-size: 1rem;
+    }
+    fieldset{
+        flex-direction: column;
+        width: 100%;
+        margin: 0;
+    }fieldset div{
+        margin: 10px 4vw;
+        width: calc(100% - 5vw);
+    }
+}
+@media (max-width: 768px) {
+    html{
+        background-image: url(./assets/greenLeafsBg.jpg);
+        background-size: cover;
+    }
+    body{
+        flex-direction: column;
+        justify-content: start;
+        text-align: center;
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+    .backgroundDiv{
+        width: 100vw;
+        background-image: none;
+    }.logoDiv{
+        margin: 0;
+        height: 100px;
+        background-color: rgba(0, 0, 0, 0);
+    }.logoImg{
+        width: 66px;
+    }
+    .creditDiv1{
+        display: none;
+    }
+    main{
+        background-color: white;
+        width: 80vw;
+        height: calc(100vh - 130px);
+        margin: 0 auto;
+    }.mainText{
+        text-align: center;
+        margin: 1vw auto ;
+    }button{
+        margin-top: 20px;
+    }.creditDiv2{
+        display: block;
+    }
+}
+@media (max-width: 425px) {
+    main{
+        width: 90vw;
+    }
+}
+/* removing arrows from number input */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}

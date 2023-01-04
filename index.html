@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up Form</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./script.js" defer></script>
+  </head>
+  <body>
+    <div class="backgroundDiv">
+      <div class="logoDiv">
+        <img src="./assets/odinLogo.png" class="logoImg" />
+        <h1 class="logoText">ODIN</h1>
+      </div>
+      <div class="creditDiv creditDiv1">
+        Photo by 
+        <a href="https://unsplash.com/@haliewestphoto" target="_blank">Halie West</a> on <a href="https://unsplash.com" target="_blank">Unsplash</a>
+      </div>
+    </div>
+
+    <main>
+      <div class="mainText">
+        <p class="longText">
+          This is not a real online service! You know you need something like
+          this in your life to help you realize your deepest dreams.
+          <span class="newLine">
+            Sign up <span class="italic">now</span> to get started!
+          </span>
+        </p>
+        <p class="shortText">
+          You <span class="italic">know</span> you want to.
+        </p>
+      </div>
+      <form action="">
+        <h1>Let's do this!</h1>
+        <fieldset class="nameSet">
+          <div class="firstName">
+            <label for="firstName">FIRST NAME</label>
+            <input
+              type="text"
+              id="firstName"
+              name="firstName"
+              placeholder="John"
+              required
+              minlength="4"
+            />
+          </div>
+          <div class="lastName">
+            <label for="lastName">LAST NAME</label>
+            <input
+              type="text"
+              id="lastName"
+              name="lastName"
+              placeholder="Doe"
+              required
+              minlength="4"
+            />
+          </div>
+        </fieldset>
+        <fieldset class="contactSet">
+          <div class="email">
+            <label for="email">EMAIL</label>
+            <input
+              type="email"
+              id="email"
+              required
+              name="email"
+              placeholder="abcde@fgh.ijk"
+            />
+          </div>
+          <div class="phoneNum">
+            <label for="phoneNum">PHONE NUMBER</label>
+            <input
+              type="number"
+              id="phoneNum"
+              name="phoneNumber"
+              placeholder="12345678"
+              required
+              min="10000000"
+              max="99999999"
+            />
+          </div>
+        </fieldset>
+        <fieldset class="passwordSet">
+          <div class="password">
+            <label for="password">PASSWORD</label>
+            <input class="error" type="password" id="password" name="password" required minlength="8" />
+          </div>
+          <div class="confPass">
+            <label for="confPass">CONFIRM PASSWORD</label>
+            <input class="error" type="password" id="confPass" name="confPass" required
+             />
+          </div>
+        </fieldset>
+        <div class="shadow"></div>
+        <button type="submit">Create Account</button>
+    </form>
+    <p class="logIn">
+      Already have an account? <a href="" class="greenText">Log in</a>
+    </p>
+    </main>
+    <div class="creditDiv2">
+      Photo by <a target="_blank" href="https://unsplash.com/@haliewestphoto">Halie West</a> on <a href="https://unsplash.com/@haliewestphoto" target="_blank">Unsplash</a>
+    </div>
+  </body>
+</html>
